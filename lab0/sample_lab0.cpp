@@ -1,5 +1,5 @@
-//Author:
-//Date:
+//Author: Gentry Atkinson
+//Date: 09/01/2020
 //Class: CS1428 HL1
 //Description: This program will print some information about the author.
 
