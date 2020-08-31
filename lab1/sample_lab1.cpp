@@ -51,5 +51,7 @@ int main(){
     cout << "-";
     cout << birthYear + (last4%1337);
 
+    outFile.close();
+
     return 0;
 }

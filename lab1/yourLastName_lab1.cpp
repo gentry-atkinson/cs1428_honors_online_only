@@ -27,5 +27,6 @@ int main(){
 
     //generate and print the ID number on the console
 
+    outFile.close();
     return 0;
 }
