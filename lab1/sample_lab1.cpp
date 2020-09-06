@@ -47,9 +47,12 @@ int main(){
     outFile << last4 << endl;
 
     //generate and print the ID number on the console
-    cout << numberOfCharacter(lastInitial)+numberOfCharacter(fallOrSpring);
-    cout << "-";
-    cout << birthYear + (last4%1337);
+    int group1 =  numberOfCharacter(lastInitial)+numberOfCharacter(fallOrSpring);
+    int group2 =  birthYear + (last4%1337);
+    cout << group1 << "-" << group2;
+
+    //print the orientation group then the advising group right after the ID
+    cout << " " << group1%10 << " " << group2/1000 << endl;
 
     outFile.close();
 
