@@ -27,6 +27,8 @@ int main(){
 
     //generate and print the ID number on the console
 
+    //print the orientation group then the advising group right after the ID
+
     outFile.close();
     return 0;
 }
