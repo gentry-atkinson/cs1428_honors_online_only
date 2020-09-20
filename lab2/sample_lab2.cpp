@@ -57,6 +57,6 @@ int main(){
             cout << "do not accept" << endl;
     }
 
-
+    outFile.close();
     return 0;
 }
