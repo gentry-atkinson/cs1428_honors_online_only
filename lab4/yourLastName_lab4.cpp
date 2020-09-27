@@ -9,7 +9,7 @@
 using namespace std;
 
 //Q1: create a constant integer named CLASS_SIZE
-const int CLASS_SIZE = 10;
+const int;
 
 int main(){
     //Q2: ask the user to enter a class title
