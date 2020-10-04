@@ -3,6 +3,7 @@
 //Class: CS1428 HL1
 //Description: This program will connect four code modules to make a convenient
 //      program for school administration.
+
 #include<iostream>
 #include<fstream>
 
@@ -36,69 +37,43 @@ void grade_book(float[]);
 
 int main(){
     //Q1: create an output filestream in append mode and open "catalog.txt"
-    ofstream outFile("catalog.txt", std::fstream::app);
-
-    char input;
-    float grades[CLASS_SIZE];
-    string studentID;
 
     //Q2: create a loop that will run until the user chooses to quit
-    do{
+
         //Q3: print the menu and accept the user's choice
-        cout << "i- generate an ID" << endl;
-        cout << "a- determine if a student is accepted" << endl;
-        cout << "c- enter a course in the catalog" << endl;
-        cout << "g- print the max, min, and avg grade of an assignment" << endl;
-        cout << "q- quit the program" << endl;
-        cout << "Please select one option from the menu:";
-        cin >> input;
+
 
         //Q4: branch to call the correct function
-        switch(input){
+        switch(){
             //Q5: choice is 'i'
             case 'i':
-                studentID = generate_ID();
-                cout << "Student ID: " << studentID << endl;
+
                 break;
             //Q6: choice is 'a'
             case 'a':
-                switch(accepted()){
-                    case 'a':
-                        cout << "accepted" << endl;
-                        break;
-                    case 'w':
-                        cout << "wait list" << endl;
-                        break;
-                    case 'n':
-                        cout << "not accepted" << endl;
-                        break;
-                }
+
                 break;
             //Q7: choice is 'c'
             case 'c':
-                build_catalog(outFile);
+
                 break;
             //Q8: choice is 'g'
             case 'g':
-                for(int i = 0; i < CLASS_SIZE; i++){
-                    cout << "Enter one grade: ";
-                    cin >> grades[i];
-                }
-                grade_book(grades);
+
                 break;
             //Q9: choice is 'q'
             case 'q':
-                cout << "Thank you for using this program." << endl;
+
                 break;
             //Q10: print an error if the user chooses an option that is not on the menu
             default:
-                cout << "That is not a valid selection." << endl;
+
                 break;
         }
-    }while(input!='q');
+
 
     //Q11: close the filestream
-    outFile.close();
+
     return 0;
 }
 
