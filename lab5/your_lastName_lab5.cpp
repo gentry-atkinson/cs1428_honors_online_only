@@ -46,25 +46,35 @@ int main(){
         //Q4: branch to call the correct function
         switch(){
             //Q5: choice is 'i'
+            //Print the student ID to console
             case 'i':
 
                 break;
+
             //Q6: choice is 'a'
+            //Print "accepted", "wait list", or "do not accept"
             case 'a':
 
                 break;
+
             //Q7: choice is 'c'
+            //Pass your filestream to the build_catalog function
             case 'c':
 
                 break;
+
             //Q8: choice is 'g'
+            //Store 10 grades in an array and pass the array to grade_book
             case 'g':
 
                 break;
+
             //Q9: choice is 'q'
+            //Prtint a goodbye message
             case 'q':
 
                 break;
+
             //Q10: print an error if the user chooses an option that is not on the menu
             default:
 

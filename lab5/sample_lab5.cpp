@@ -228,7 +228,6 @@ void grade_book(float studentGrades[]){
         if(studentGrades[i] > maximum) maximum = studentGrades[i];
         //add grades[i] into the sum variable
         total += studentGrades[i];
-        i++;
     }
 
     cout << "The maximum grade is: " << maximum << endl;
