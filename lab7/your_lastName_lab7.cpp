@@ -30,7 +30,7 @@ char accepted();
 void build_catalog(ofstream&);
 void grade_book(float[]);
 
-//Fill in the function definitions below
+//Fill in the function definitions below the main function
 int addFacultyMember(facultyMember[], int);
 void printRoster(facultyMember[], int);
 void saveRoster(facultyMember[], int);
