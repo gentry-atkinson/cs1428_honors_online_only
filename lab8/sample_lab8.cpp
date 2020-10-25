@@ -1,8 +1,7 @@
 //Author:
 //Date:
 //Class: CS1428 HL1
-//Description: This program will connect four code modules to make a convenient
-//      program for school administration.
+//Description: This program is convenient tool for school administration.
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -103,6 +102,7 @@ int main(){
                 break;
             case 'o':
                 sortRoster(roster, numFaculty);
+                cout << "Rosted sorted by last name" << endl;
                 break;
             case 'q':
                 saveRoster(roster, numFaculty);
