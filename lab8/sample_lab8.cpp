@@ -150,8 +150,10 @@ void sortRoster(facultyMember roster[], int s){
     int maxElement = s-1;
     while(!done){
         done = true;
+        cout << "bubbling into index: " << maxElement << endl;
         for(int i = 0; i < maxElement; i++){
-            if(roster[i].lastName.compare(roster[i].lastName) < 0){
+            if(roster[i].lastName.compare(roster[i+1].lastName) > 0){
+                cout << "swapping" << endl;
                 swap_roster(roster[i], roster[i+1]);
                 done = false;
             }
