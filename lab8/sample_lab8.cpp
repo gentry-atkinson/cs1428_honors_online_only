@@ -145,6 +145,21 @@ int searchRoster(const facultyMember roster[], string firstName, string lastName
 //      s: an integer size for the array
 //Returns: nothing
 //Side Effects
+void sortRoster(facultyMember roster[], int s){
+    bool done = false;
+    int maxElement = s-1;
+    while(!done){
+        done = true;
+        for(int i = 0; i < maxElement; i++){
+            if(roster[i].lastName.compare(roster[i].lastName) < 0){
+                swap_roster(roster[i], roster[i+1]);
+                done = false;
+            }
+        }
+        maxElement--;
+    }
+    return;
+}
 
 
 
