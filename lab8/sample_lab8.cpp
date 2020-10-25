@@ -127,11 +127,19 @@ int main(){
 //Returns: the first index in roster that matches both names or -1 if no match is found
 //Side effects: none
 int searchRoster(const facultyMember roster[], string firstName, string lastName, int s){
+    //start a for loop with a loop variable named i. i should increase by 1 from 0 to s-1
     for(int i = 0; i < s; i++){
+        //start an if statement. the condition should be true if firstName is equal to
+        //roser[i].firstName AND lastName is equal to roster[i].lastname
         if(firstName == roster[i].firstName && lastName == roster[i].lastName)
+            //return i
             return i;
+        //end of if statement
+    //end of for loop
     }
+    //return -1
     return -1;
+//end of searchroster
 }
 
 
@@ -146,21 +154,36 @@ int searchRoster(const facultyMember roster[], string firstName, string lastName
 //Returns: nothing
 //Side Effects
 void sortRoster(facultyMember roster[], int s){
+    //Create two variables:
+    //  a bool named done which starts with the value false
+    //  an int named maxElement which is initialized to s-1
     bool done = false;
     int maxElement = s-1;
+
+    //Start a while loop that will run as long as done is false
     while(!done){
+        //Set done to true
         done = true;
-        cout << "bubbling into index: " << maxElement << endl;
+        //Start a for loop with a loop variable named i. The loop should run while
+        //i is less than maxElement. i should increase by 1 every iteration
         for(int i = 0; i < maxElement; i++){
+            //start an if statement with the condition (roster[i].lastName.compare(roster[i+1].lastName) > 0)
+            //this condition is true when two names are out of order
             if(roster[i].lastName.compare(roster[i+1].lastName) > 0){
-                cout << "swapping" << endl;
+                //use the swap_roster function to swap roster[i] and roster[i+1]
                 swap_roster(roster[i], roster[i+1]);
+                //set done to false
                 done = false;
+            //end of if block
             }
+        //end of for loop
         }
+        //decrease maxElement by 1
         maxElement--;
+    //end of while loop
     }
     return;
+//end of sortRoster
 }
 
 
