@@ -10,6 +10,7 @@ using namespace std;
 int findMaxValue(int arr[], int s);
 int findMinValue(const int arr[], int s);
 long findSum(const int arr[], int s);
+void findMaxAndMin(int arr[], int s, int &min, int&max);
 
 
 //### Do not make any changes to the Main function###
@@ -25,8 +26,11 @@ int main(){
   //for(int i = 0; i < LIST_SIZE; i++) cout << arr[i] << " ";
   //cout << endl;
 
-  cout << "The smallest value in the list is: " << findMinValue(arr, LIST_SIZE) << endl;
-  cout << "The largest value in the list is: " << findMaxValue(arr, LIST_SIZE) << endl;
+  int min, max;
+  findMaxAndMin(arr, LIST_SIZE, min, max);
+
+  cout << "The smallest value in the list is: " << min << endl;
+  cout << "The largest value in the list is: " << max << endl;
   cout << "The sum of the values in the list is: " << findSum(arr, LIST_SIZE) << endl;
 
   return 0;
@@ -46,6 +50,16 @@ int findMaxValue(int arr[], int s){
         }
     }
     return arr[maxIndex];
+}
+
+void findMaxAndMin(int arr[], int s, int &min, int&max){
+    min = 9999999;
+    max = 0;
+    for(int i = 0; i < s; i++){
+        if(arr[i] > max) max = arr[i];
+        if(arr[i] < min) min = arr[i];
+    }
+    return;
 }
 
 //Find Min Value
@@ -90,7 +104,7 @@ void add(long &a, int b){
 long findSum(const int arr[], int s){
     long total = 0;
     for(int i = 0; i < s; i++){
-        add(total, arr[i]);
+        total += arr[i];
     }
     return total;
 }
