@@ -19,14 +19,12 @@ float calcEfficiency(float, float);
 int main(){
 
   const int LIST_SIZE = 100000;
-  const int SEARCH_VALUE = 1337;
   int list[LIST_SIZE];
 
   //Assign a random value to every entry in the list and then make sure that
   //the search term is included in the list somewhere
   srand(23);
   for(int i = 0; i < LIST_SIZE; i++) list[i] = rand();
-  list[rand() % LIST_SIZE] = SEARCH_VALUE;
 
   //time a run of sequential search
   auto start = high_resolution_clock::now();
